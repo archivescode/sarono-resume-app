@@ -1,0 +1,13 @@
+.header{
+    @apply flex justify-center items-center p-14 rounded-t-lg;
+    background-color: #2eca7f;
+}
+.content_header{
+    @apply flex justify-center items-center text-white text-5xl font-bold;
+}
+.wrapper_content{
+    @apply flex flex-col py-14 px-7 bg-white rounded-b-lg;
+}
+.image_action{
+    @apply absolute left-0 bottom-2 text-white;
+}

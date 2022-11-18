@@ -1,129 +1,84 @@
-.container {
-  padding: 0 2rem;
+.profile{
+  @apply p-7 rounded-t-lg;
+  background-color: #2eca7f;
 }
-
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.profile_content_wrapper{
+  @apply grid grid-cols-3 relative;
 }
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.avatar{
+  @apply flex justify-center items-center lg:-mb-20 text-white;
 }
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.content_profile{
+  @apply col-span-2 flex justify-center items-center flex-col text-white;
 }
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.profile_item{
+  @apply flex justify-center items-center relative;
 }
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.profile_name{
+  @apply text-5xl font-bold;
 }
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.profile_age{
+  @apply text-lg font-bold;
 }
-
-.title,
-.description {
-  text-align: center;
+.profile_action{
+  @apply absolute right-0 bottom-0;
 }
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.button_edit_profile{
+  @apply flex gap-3 text-green-500 bg-white focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center font-bold;
 }
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.experience{
+  @apply flex flex-col py-14 px-7 bg-white rounded-b-lg;
 }
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+.experience_header{
+  @apply flex justify-between items-end;
 }
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
+.experience_title{
+  @apply font-bold text-xl;
+}
+.experience_content_wrapper{
+  @apply py-7;
+}
+.experience_content{
+  @apply flex gap-7 flex-col gap-5 border-l-2 border-gray-300;
+}
+.experience_item{
+  @apply relative flex gap-7 items-center p-5 border-l-2 border-green-500 shadow-lg rounded-lg hover:bg-slate-100 ml-5;
+}
+.experience_item:before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-color: #fff;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  left: -29px;
+  border: 2px solid #2eca7f;
+  z-index: 2;
 }
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.experience_item:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-color: #2eca7f;
+  border-radius: 10px;
+  width: 29px;
+  height: 2px;
+  top: calc(50% + 5px);
+  left: -29px;
+  z-index: 1;
 }
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.experience_item_content{
+  @apply w-full;
 }
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.experience_item_company{
+  @apply text-lg font-bold;
 }
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.link_add{
+  background-color: #2eca7f;
+  @apply text-white font-bold py-2 px-5 rounded-lg;
 }
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+.edit_icon{
+  @apply flex;
 }

@@ -1,11 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Montserrat',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
 }
-
+body{
+  background-color: #f5f5f5;
+  font-family: 'Montserrat', sans-serif;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -14,7 +23,25 @@ a {
 * {
   box-sizing: border-box;
 }
+.wrapper {
+  @apply py-7;
+}
 
+.main {
+  @apply max-w-5xl mx-auto rounded-xl shadow-lg;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright{
+  font-size: 1rem;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -23,4 +50,29 @@ a {
     color: white;
     background: black;
   }
+}
+
+/* form */
+label{
+  line-height: 1.5;
+  margin-bottom: .5rem;
+}
+.wrapper-form{
+  @apply flex flex-col mb-5;
+}
+.wrapper-input{
+  @apply flex flex-col gap-3 relative;
+}
+.form-input{
+  @apply block w-full py-2 px-3 text-sm text-gray-900 border border-gray-300 rounded cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400;
+}
+.image_action{
+  @apply absolute left-5 bottom-14 text-white;
+}
+.image_action button{
+  @apply flex gap-1 items-center bg-green-500 text-white px-3 py-2 rounded;
+}
+.btn-submit{
+  background-color: #2eca7f;
+  @apply text-white font-bold py-2 px-5 rounded-lg;
 }
